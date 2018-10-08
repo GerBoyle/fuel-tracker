@@ -1,2 +1,53 @@
+$navbar-default-bg: purple;
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+    float: left;
+    font-size:1.7em;
+    color:#fff;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    font-weight:bold;
+}
+
+#logo:hoover {
+    color:#fff;
+    text-decoration:none;
+}
+
+.center {
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: asset-url('fuel-2741_640.jpg');
+    background-size: cover;
+    height: 510px;
+    width: 1100px;
+}
+
+.jumbotron h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -10px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.btn-xlarge {
+    font-size: 1.7em;
+    background-color: orange;
+    float: left;
+}
+
+
+.btn-xlarge2 {
+    font-size: 1.7em;
+    background-color: orange;
+    float: right;
+   
+}
