@@ -1,0 +1,18 @@
+<h1>Fuel log</h1>
+
+<p>
+    Total Cost: <%= @fuel.total_cost %>
+</p>
+<p>
+    Price per litre: <%= @fuel.price_litre %>
+</p>
+<p>
+    Number of litres: <%= @fuel.num_litres %>
+</p>
+<p>
+    Date: <%= @fuel.date %>
+</p>
+
+<%= link_to "Edit this fuel", edit_fuel_path(@fuel) %> |
+
+<%= link_to "Back to fuel log", fuels_path %>
