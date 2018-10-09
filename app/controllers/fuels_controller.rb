@@ -1,5 +1,6 @@
 class FuelsController < ApplicationController
     before_action :set_fuel, only: [:edit, :update, :show, :destroy]
+    #before_action :require_same_user, only: [:edit, :update, :show, :destroy, :index]
     
    def new
       @fuel = Fuel.new 
@@ -12,7 +13,7 @@ class FuelsController < ApplicationController
    end
    
    def index
-      @fuels=Fuel.all
+         @fuels=Fuel.all
    end
    
    def update
@@ -26,6 +27,7 @@ class FuelsController < ApplicationController
     
    def create
       @fuel = Fuel.new(fuel_params)
+      @fuel.user = User.first
       @fuel.save
       redirect_to fuel_path(@fuel)
    end
@@ -45,4 +47,11 @@ class FuelsController < ApplicationController
       params.require(:fuel).permit(:num_litres, :price_litre, :total_cost, :date)
    end
     
+   #def require_same_user
+    #  if current_user != @fuel.user
+     #    flash[:danger] = "You can only view your own fuel log"
+      #   redirect_to root_path
+      #end
+   #end
+   
 end
