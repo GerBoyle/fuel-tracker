@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-  has_many :fuels
-  #before_save { self.email = email.downcase }
+  
+  
+  has_many :user_fuels
+  has_many :fuels, through: :user_fuels
 end

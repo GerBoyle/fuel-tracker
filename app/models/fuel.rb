@@ -1,3 +1,5 @@
 class Fuel < ApplicationRecord
-    belongs_to :user
+    
+    has_many :user_fuels
+    has_many :users, through: :user_fuels
 end

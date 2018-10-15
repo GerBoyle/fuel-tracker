@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181009120835) do
+ActiveRecord::Schema.define(version: 20181015142458) do
 
   create_table "fuels", force: :cascade do |t|
     t.decimal "num_litres"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20181009120835) do
     t.datetime "updated_at", null: false
     t.date "date"
     t.integer "user_id"
+  end
+
+  create_table "user_fuels", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "fuel_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fuel_id"], name: "index_user_fuels_on_fuel_id"
+    t.index ["user_id"], name: "index_user_fuels_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
