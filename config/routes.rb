@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :fuels
   
-  resources :user_fuels, only: [:create]
+  resources :user_fuels, only: [:create, :destroy]
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181015142458) do
+ActiveRecord::Schema.define(version: 20181016100214) do
 
   create_table "fuels", force: :cascade do |t|
     t.decimal "num_litres"

@@ -11,6 +11,8 @@
         <th>Date</th>
         <th>Number of litres</th>
     </tr>
+
+
     <% @fuels.each do |fuel| %>
     <tr>
         <td><%= fuel.total_cost %></td>
@@ -20,6 +22,8 @@
         <td><%= link_to 'Edit', edit_fuel_path(fuel) %></td>
         <td><%= link_to 'Show', fuel_path(fuel) %></td>
         <td><%= link_to 'Destroy', fuel_path(fuel), method: :delete, data: {confirm: "Are you sure?"} %></td>
-    </tr>
+      </tr>
     <% end %>
-</table>
+
+</table> 
+

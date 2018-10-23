@@ -12,7 +12,7 @@ class FuelsController < ApplicationController
    end
    
    def index
-         @fuels=Fuel.all
+      @fuels=Fuel.all
    end
    
    def update
